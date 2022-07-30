@@ -1,0 +1,11 @@
+
+
+<%= render @materiel %>
+
+<div>
+  <%= link_to "Edit this materiel", edit_materiel_path(@materiel), class:"btn btn-outline-success" %> 
+  <%= link_to "Back to materiels", materiels_path, class:"btn btn-outline-info" %>
+<br/><br/>
+  <%= button_to "Destroy this materiel", @materiel, method: :delete, class:"btn btn-outline-danger" %>
+  <br/><br/>
+</div>

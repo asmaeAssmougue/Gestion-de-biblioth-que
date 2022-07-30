@@ -1,0 +1,60 @@
+
+
+<h1>Matériels</h1>
+<table class="table table table-bordered table table-hover">
+  <thead class="thead-dark">
+    <tr>
+    	 
+      <th scope="col">#</th>
+      <th scope="col">Type de materiel</th>
+      <th scope="col">Marque</th>
+      <th scope="col">L'état</th>
+      
+      <th scope="col">Nombre en Stock</th>
+      <th scope="col">Show</th>
+      <th scope="col">Edit</th>
+    <!--  <th scope="col">Destroy</th>-->
+    </tr>
+  </thead>
+  <tbody>
+  	 <% @materiels.each do |materiel| %>
+    <tr>
+      <th scope="row"><%= materiel.id %></th>
+      <td><%= materiel.typeM %></td>
+      <td><%= materiel.marque %></td>
+       <td><%= materiel.etat %></td>
+      
+      <td><%= materiel.nbrStock %></td>
+      <td>
+      <%= link_to "Show", materiel_path(materiel) %>
+      </td>
+      <td>
+      <%= link_to "Edit", edit_materiel_path(materiel) %>
+      </td>
+      <!--
+      <td>
+      <%= link_to "Destroy", materiel_path(materiel), method: :delete, data: {confirm: "Are you sure ?"} %>
+      </td> -->
+    </tr>
+    <% end %>
+  </tbody>
+</table>
+<%= link_to "New materiel", new_materiel_path ,class:"btn btn-outline-primary" %>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
